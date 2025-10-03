@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 # Env vars
 TELEGRAM_TOKEN = os.environ.get("8147327911:AAHXWpFEuj3gYaE5ltI0I7vTMdaEu4j6f8U")
-OPENAI_API_KEY = os.environ.get("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")
+OPENAI_API_KEY = os.environ.get("")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "mysecret")
 
 if not TELEGRAM_TOKEN or not OPENAI_API_KEY:
@@ -91,3 +91,4 @@ if __name__ == "__main__":
         bot.set_webhook(webhook_url)
         logger.info(f"Webhook set: {webhook_url}")
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
