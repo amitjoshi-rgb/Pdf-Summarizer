@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Env vars
-TELEGRAM_TOKEN = os.environ.get("8147327911:AAHXWpFEuj3gYaE5ltI0I7vTMdaEu4j6f8U")
+TELEGRAM_TOKEN = os.environ.get("")
 OPENAI_API_KEY = os.environ.get("")
 WEBHOOK_SECRET = os.environ.get("WEBHOOK_SECRET", "mysecret")
 
@@ -91,4 +91,5 @@ if __name__ == "__main__":
         bot.set_webhook(webhook_url)
         logger.info(f"Webhook set: {webhook_url}")
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
 
